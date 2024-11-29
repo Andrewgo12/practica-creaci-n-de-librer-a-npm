@@ -1194,12 +1194,27 @@ const installDependencies = async () => {
     }
 };
 
+
+
 // Función principal con el menú interactivo
 const main = async () => {
     console.log(chalk.blue.bold('\n🌟 ¡Bienvenido al Instalador de Librerías para tu Proyecto! 🌟\n'));
 
+
+
     try {
         await installDependencies();
+
+        // Guía rápida para el usuario
+        console.log(chalk.yellow.bold('Guía Rápida de Uso:'));
+        console.log('1. Navega a tu proyecto con `cd <ruta del proyecto>`.');
+        console.log('2. Instala localmente: `npm i library-installer`.');
+        console.log('3. Ejecuta con: `npx library-installer` o `library-installer` si lo instalaste globalmente.');
+        console.log('4. Selecciona las librerías con espacio, A para todas, I para invertir, Enter para instalar.');
+        console.log('5. Usa las flechas hacia arriba y hacia abajo para desplazarte por las opciones disponibles.');
+        console.log('6. Si presionas Enter sin seleccionar ninguna librería, el proceso será cancelado.');
+        console.log();
+
 
         // Solicitar al usuario que seleccione las librerías
         const { selectedLibraries } = await inquirer.prompt([
@@ -1225,8 +1240,9 @@ const main = async () => {
         for (const library of selectedLibraries) {
             await installLibrary(library);
         }
-
+        console.log(); console.log();
         console.log(chalk.green('\n🎉 ¡Todo listo! Las librerías fueron instaladas con éxito. ✅🎉'));
+        console.log(); console.log();
     } catch (error) {
         console.error(chalk.red(`\n❗ Ocurrió un error inesperado en el proceso principal: ${error.message} 😱`));
         console.error(chalk.red(`Ubicación: main()`));
