@@ -1,6 +1,6 @@
 {
   "name": "library-installer",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Una herramienta CLI para instalar elegantemente múltiples bibliotecas NPM con un menú interactivo.",
   "main": "installer.js",
   "type": "module",

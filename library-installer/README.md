@@ -17,7 +17,7 @@ This tool is ideal for developers looking to improve efficiency and automation i
 
 ### Install Locally
 
-To use **Library Installer** only within a specific project, you should install it as a project dependency.
+To use ** npx Library Installer** only within a specific project, you should install it as a project dependency.
 
 #### Steps for local installation:
 
@@ -36,7 +36,7 @@ To use **Library Installer** only within a specific project, you should install 
    npm install library-installer
    ```
 
-   This will add the `library-installer` package to your `package.json` under the dependencies section.
+   This will add the ` npx library-installer` package to your `package.json` under the dependencies section.
 
 3. **Run the tool using npx**:
    If you have installed `library-installer` locally, you can run it using the following command:
